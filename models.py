@@ -17,9 +17,4 @@ class Entry(BaseModel):
     time_spent = IntegerField()
     notes = TextField()
 
-def initialise():
-
-    database.connect()
-    database.create_tables([Entry], safe=True)
-
 

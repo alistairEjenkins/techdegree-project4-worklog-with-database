@@ -1,6 +1,7 @@
 
 from models import Entry, database
 
+
 class Tasks():
 
     def initialise(self):
@@ -12,6 +13,11 @@ class Tasks():
 
         worklog = Entry(**entry)
         worklog.save()
+
+    def has_entries(self):
+
+        entries = self.employees()
+        return True if entries.count() >= 1 else False
 
     def employees(self):
 
